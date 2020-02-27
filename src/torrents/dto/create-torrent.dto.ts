@@ -1,6 +1,6 @@
 import { IsString } from 'class-validator';
 
-export class NewTorrentDTO {
+export class CreateTorrentDto {
   @IsString()
   readonly name: string;
 
@@ -8,5 +8,5 @@ export class NewTorrentDTO {
   readonly type: string;
 
   @IsString()
-  readonly url: string;
+  readonly link: string;
 }
