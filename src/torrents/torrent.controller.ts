@@ -10,7 +10,6 @@ export class TorrentsController {
 
   @Post()
   async create(@Body() createTorrentDto: CreateTorrentDto) {
-    console.log(typeof(createTorrentDto.link) + createTorrentDto.link)
     this.torrentsService.create(createTorrentDto);
   }
 

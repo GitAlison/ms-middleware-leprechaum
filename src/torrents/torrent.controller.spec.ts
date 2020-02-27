@@ -21,6 +21,7 @@ describe('CatsController', () => {
     it('should return an array of Torrents', async () => {
       const result: Torrent[] = [
         {
+          user: "UncleBob",
           type: "movie",
           link: 'magnet://12321312',
           name: 'Star Wars 01',
