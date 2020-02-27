@@ -17,7 +17,10 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./e2e/jest-e2e.json",
-    "postinstall": "npm run prestart:prod"
+    "postinstall": "npm run start:prod"
+  },
+  "engines": {
+    "node": "12.16.1"
   },
   "dependencies": {
     "@nestjs/common": "^6.11.8",
