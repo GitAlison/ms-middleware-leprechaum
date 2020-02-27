@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { TorrentModule } from './modules/torrent/torrent.module';
+import { CatsModule } from './cats/cats.module';
+import { CoreModule } from './core/core.module';
+import { TorrentsModule } from './torrents/torrent.module';
 
 @Module({
-  imports: [TorrentModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [CoreModule, CatsModule, TorrentsModule],
 })
 export class AppModule {}
