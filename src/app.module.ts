@@ -10,10 +10,7 @@ import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(`mongodb+srv://caiocarnelos:123abc123@lp0-fqnap.mongodb.net/test?retryWrites=true&w=majority`),
-    //                      mongodb+srv://<username>:<password>@lp0-fqnap.mongodb.net/test?retryWrites=true&w=majority
-    //                      'mongodb+srv://adsonrocha:123456@cluster0-5efft.mongodb.net/test?retryWrites=true&w=majority'),
-    //                      'mongodb+srv://<username>:<password>@lp0-fqnap.mongodb.net/test?retryWrites=true&w=majority'
+    MongooseModule.forRoot(`mongodb+srv://leprechaum:4JIhM5mnLcABnfC9@lp0-fqnap.mongodb.net/leprechaum?retryWrites=true&w=majority`),
     CoreModule, 
     CatsModule, 
     TorrentsModule, 
