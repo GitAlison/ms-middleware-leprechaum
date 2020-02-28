@@ -1,10 +1,12 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { ParseIntPipe } from '../common/pipes/parse-int.pipe';
 import { TorrentsService } from './torrent.service';
 import { CreateTorrentDto } from './dto/create-torrent.dto';
 import { Torrent } from './interfaces/torrent.interface';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('torrents')
+@UseGuards(JwtAuthGuard)
 export class TorrentsController {
   constructor(private readonly torrentsService: TorrentsService) {}
 
