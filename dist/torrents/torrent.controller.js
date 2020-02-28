@@ -16,6 +16,7 @@ const common_1 = require("@nestjs/common");
 const parse_int_pipe_1 = require("../common/pipes/parse-int.pipe");
 const torrent_service_1 = require("./torrent.service");
 const create_torrent_dto_1 = require("./dto/create-torrent.dto");
+const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
 let TorrentsController = class TorrentsController {
     constructor(torrentsService) {
         this.torrentsService = torrentsService;
@@ -52,6 +53,7 @@ __decorate([
 ], TorrentsController.prototype, "findOne", null);
 TorrentsController = __decorate([
     common_1.Controller('torrents'),
+    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     __metadata("design:paramtypes", [torrent_service_1.TorrentsService])
 ], TorrentsController);
 exports.TorrentsController = TorrentsController;

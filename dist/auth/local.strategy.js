@@ -8,30 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
+const passport_local_1 = require("passport-local");
+const passport_1 = require("@nestjs/passport");
 const common_1 = require("@nestjs/common");
-const mongoose_1 = require("@nestjs/mongoose");
-const mongoose_2 = require("mongoose");
-let CatsService = class CatsService {
-    constructor(catModel) {
-        this.catModel = catModel;
+const auth_service_1 = require("./auth.service");
+let LocalStrategy = class LocalStrategy extends passport_1.PassportStrategy(passport_local_1.Strategy) {
+    constructor(authService) {
+        super();
+        this.authService = authService;
     }
-    async create(createCatDto) {
-        const createdCat = new this.catModel(createCatDto);
-        return createdCat.save();
-    }
-    async findAll() {
-        return this.catModel.find().exec();
+    async validate(username, password) {
+        const user = await this.authService.validateUser(username, password);
+        if (!user) {
+            throw new common_1.UnauthorizedException();
+        }
+        return user;
     }
 };
-CatsService = __decorate([
+LocalStrategy = __decorate([
     common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel('Cat')),
-    __metadata("design:paramtypes", [typeof (_a = typeof mongoose_2.Model !== "undefined" && mongoose_2.Model) === "function" ? _a : Object])
-], CatsService);
-exports.CatsService = CatsService;
-//# sourceMappingURL=cats.service.js.map
+    __metadata("design:paramtypes", [auth_service_1.AuthService])
+], LocalStrategy);
+exports.LocalStrategy = LocalStrategy;
+//# sourceMappingURL=local.strategy.js.map

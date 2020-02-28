@@ -8,30 +8,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const mongoose_1 = require("@nestjs/mongoose");
-const mongoose_2 = require("mongoose");
-let CatsService = class CatsService {
-    constructor(catModel) {
-        this.catModel = catModel;
+let UsersService = class UsersService {
+    constructor() {
+        this.users = [
+            {
+                userId: 1,
+                username: 'caiocarnelos',
+                password: '123456',
+            },
+            {
+                userId: 2,
+                username: 'Alisson',
+                password: '123456',
+            },
+            {
+                userId: 3,
+                username: 'Henrique',
+                password: '123456',
+            },
+            {
+                userId: 4,
+                username: 'Kaio',
+                password: '123456',
+            },
+        ];
     }
-    async create(createCatDto) {
-        const createdCat = new this.catModel(createCatDto);
-        return createdCat.save();
-    }
-    async findAll() {
-        return this.catModel.find().exec();
+    async findOne(username) {
+        return this.users.find(user => user.username === username);
     }
 };
-CatsService = __decorate([
+UsersService = __decorate([
     common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel('Cat')),
-    __metadata("design:paramtypes", [typeof (_a = typeof mongoose_2.Model !== "undefined" && mongoose_2.Model) === "function" ? _a : Object])
-], CatsService);
-exports.CatsService = CatsService;
-//# sourceMappingURL=cats.service.js.map
+    __metadata("design:paramtypes", [])
+], UsersService);
+exports.UsersService = UsersService;
+//# sourceMappingURL=users.service.js.map
