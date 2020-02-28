@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nes
 import { CreateUserDto } from './dto/create-user.dto';
 import { User } from './interfaces/users.interface';
 import { UsersService } from './users.service';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from './../auth/jwt-auth.guard';
 
 @UseGuards(JwtAuthGuard)
 @Controller('users')
