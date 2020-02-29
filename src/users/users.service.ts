@@ -1,37 +1,43 @@
 import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { CreateUserDto } from './dto/create-user.dto';
+import { User } from './interfaces/users.interface';
 
-export type User = any;
 
 @Injectable()
 export class UsersService {
-  private readonly users: User[];
+  constructor(
+    @InjectModel('User') private readonly userModel: Model<User>,
+    ) {}
 
-  constructor() {
-    this.users = [
-      {
-        userId: 1,
-        username: 'caiocarnelos',
-        password: '123456',
-      },
-      {
-        userId: 2,
-        username: 'Alisson',
-        password: '123456',
-      },
-      {
-        userId: 3,
-        username: 'Henrique',
-        password: '123456',
-      },
-      {
-        userId: 4,
-        username: 'Kaio',
-        password: '123456',
-      },
-    ];
+  // Create
+  async create(createUserDto: CreateUserDto): Promise<User> {
+    const created = new this.userModel(createUserDto);
+    return created.save();
   }
 
-  async findOne(username: string): Promise<User | undefined> {
-    return this.users.find(user => user.username === username);
+  // Read
+  async findAll(){
+    return this.userModel.find().exec();
   }
+  async findOne(username){
+    return this.userModel.findOne(username).exec();
+  }
+
+  // Update
+  public async update(username: string, dto: CreateUserDto) {
+    const doc = await this.userModel.update(username);
+    if (!doc) {
+        return `Not Updated`
+    }
+    doc.set(dto);
+    return doc.save();
+}
+
+  // Delete
+  public async delete(username: string) {
+    await this.userModel.findByIdAndDelete(username);
+}
+
 }

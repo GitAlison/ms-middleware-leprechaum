@@ -9,10 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const cats_controller_1 = require("./cats.controller");
 const cats_service_1 = require("./cats.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const cat_schema_1 = require("./schemas/cat.schema");
 let CatsModule = class CatsModule {
 };
 CatsModule = __decorate([
     common_1.Module({
+        imports: [mongoose_1.MongooseModule.forFeature([{ name: 'Cat', schema: cat_schema_1.CatSchema }])],
         controllers: [cats_controller_1.CatsController],
         providers: [cats_service_1.CatsService],
     })
