@@ -13,8 +13,8 @@ export class UsersService {
 
   // Create
   async create(createUserDto: CreateUserDto): Promise<User> {
-    const createdCat = new this.userModel(createUserDto);
-    return createdCat.save();
+    const created = new this.userModel(createUserDto);
+    return created.save();
   }
 
   // Read

@@ -5,11 +5,11 @@ export class CreateTorrentDto {
   readonly user: string;
 
   @IsString()
-  readonly name: string;
+  readonly name?: string;
 
   @IsString()
-  readonly type: string;
+  readonly type?: string;
 
   @IsString()
-  readonly link: string;
+  readonly link?: string;
 }

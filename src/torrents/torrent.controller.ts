@@ -1,30 +1,47 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
-import { ParseIntPipe } from '../common/pipes/parse-int.pipe';
-import { TorrentsService } from './torrent.service';
+import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { CreateTorrentDto } from './dto/create-torrent.dto';
 import { Torrent } from './interfaces/torrent.interface';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { TorrentsService } from './torrent.service';
 
-@Controller('torrents')
 @UseGuards(JwtAuthGuard)
+@Controller('torrents')
 export class TorrentsController {
-  constructor(private readonly torrentsService: TorrentsService) {}
+  constructor(private readonly torrentService: TorrentsService) {}
 
   @Post()
   async create(@Body() createTorrentDto: CreateTorrentDto) {
-    this.torrentsService.create(createTorrentDto);
+    this.torrentService.create(createTorrentDto);
   }
 
   @Get()
-  async findAll(): Promise<Torrent[]> {
-    return this.torrentsService.findAll();
+  async findAll() {
+    return this.torrentService.findAll();
   }
 
-  @Get(':id')
-  findOne(
-    @Param('id', new ParseIntPipe())
-    id: number,
-  ) {
-    console.log(id);
+  @Get(`/:username`)
+  async findAllUsername(@Param() username: string) {
+    return this.torrentService.findAllUsername(username);
   }
+
+  @Post(`find/:name`)
+  async findName(@Param() name: string,
+  @Body() username:string
+  ){
+    return this.torrentService.findName(name, username);
+  }
+
+  @Put(`/:name`)
+  async update(
+    @Param() name: string,
+    @Body() createTorrentDto: CreateTorrentDto
+    ): Promise<Torrent[]> {
+    return this.torrentService.update(name, createTorrentDto);
+  }
+
+  @Delete(`/:username`)
+  async delete(@Param() username: string){
+    return this.torrentService.delete(username);
+  }
+
 }

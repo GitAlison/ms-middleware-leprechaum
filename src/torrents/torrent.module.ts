@@ -1,8 +1,11 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import { TorrentSchema } from './schemas/torrent.schema';
 import { TorrentsController } from './torrent.controller';
 import { TorrentsService } from './torrent.service';
 
 @Module({
+  imports: [MongooseModule.forFeature([{ name: 'Torrent', schema: TorrentSchema }])],
   controllers: [TorrentsController],
   providers: [TorrentsService],
 })
