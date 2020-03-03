@@ -13,79 +13,68 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
-const create_torrent_dto_1 = require("./dto/create-torrent.dto");
-const torrent_service_1 = require("./torrent.service");
-let TorrentsController = class TorrentsController {
-    constructor(torrentService) {
-        this.torrentService = torrentService;
+const create_user_dto_1 = require("./dto/create-user.dto");
+const users_service_1 = require("./users.service");
+const jwt_auth_guard_1 = require("./../auth/jwt-auth.guard");
+let UsersController = class UsersController {
+    constructor(usersService) {
+        this.usersService = usersService;
     }
-    async create(createTorrentDto) {
-        this.torrentService.create(createTorrentDto);
+    async create(createUserDto) {
+        this.usersService.create(createUserDto);
     }
     async findAll() {
-        return this.torrentService.findAll();
+        return this.usersService.findAll();
     }
-    async findAllUsername(username) {
-        return this.torrentService.findAllUsername(username);
+    async findOne(username) {
+        return this.usersService.findOne(username);
     }
-    async findName(name, username) {
-        return this.torrentService.findName(name, username);
-    }
-    async update(name, createTorrentDto) {
-        return this.torrentService.update(name, createTorrentDto);
+    async update(username, createUserDto) {
+        return this.usersService.update(username, createUserDto);
     }
     async delete(username) {
-        return this.torrentService.delete(username);
+        return this.usersService.delete(username);
     }
 };
 __decorate([
     common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_torrent_dto_1.CreateTorrentDto]),
+    __metadata("design:paramtypes", [create_user_dto_1.CreateUserDto]),
     __metadata("design:returntype", Promise)
-], TorrentsController.prototype, "create", null);
+], UsersController.prototype, "create", null);
 __decorate([
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
-], TorrentsController.prototype, "findAll", null);
+], UsersController.prototype, "findAll", null);
 __decorate([
-    common_1.Get(`/:username`),
+    common_1.Get(`:username`),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
-], TorrentsController.prototype, "findAllUsername", null);
+], UsersController.prototype, "findOne", null);
 __decorate([
-    common_1.Post(`find/:name`),
+    common_1.Put(`:username`),
     __param(0, common_1.Param()),
     __param(1, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:paramtypes", [String, create_user_dto_1.CreateUserDto]),
     __metadata("design:returntype", Promise)
-], TorrentsController.prototype, "findName", null);
+], UsersController.prototype, "update", null);
 __decorate([
-    common_1.Put(`/:name`),
-    __param(0, common_1.Param()),
-    __param(1, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, create_torrent_dto_1.CreateTorrentDto]),
-    __metadata("design:returntype", Promise)
-], TorrentsController.prototype, "update", null);
-__decorate([
-    common_1.Delete(`/:username`),
+    common_1.Delete(`:username`),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
-], TorrentsController.prototype, "delete", null);
-TorrentsController = __decorate([
+], UsersController.prototype, "delete", null);
+UsersController = __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
-    common_1.Controller('torrents'),
-    __metadata("design:paramtypes", [torrent_service_1.TorrentsService])
-], TorrentsController);
-exports.TorrentsController = TorrentsController;
-//# sourceMappingURL=torrent.controller.js.map
+    common_1.Controller('users'),
+    __metadata("design:paramtypes", [users_service_1.UsersService])
+], UsersController);
+exports.UsersController = UsersController;
+//# sourceMappingURL=users.controller.js.map

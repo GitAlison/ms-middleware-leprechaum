@@ -4,23 +4,23 @@ import { Model } from 'mongoose';
 import { CreateTorrentDto } from './dto/create-torrent.dto';
 import { Torrent } from './interfaces/torrent.interface';
 import mqtt = require('mqtt')
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class TorrentsService {
   constructor(
+    private readonly configService: ConfigService,
     @InjectModel('Torrent') private readonly torrentModel: Model<Torrent>,
     ) {}
 
   async create(createTorrentDto: CreateTorrentDto): Promise<Torrent> {
-    // TODO: Tirar username password daqui :) isso tem q vir do .ENV
-    const options = {username: "thapfjdc", password:"zrck8U2c81Rg"}
-    const client  = mqtt.connect('mqtt://hairdresser.cloudmqtt.com:18370', options)
+    const options = {username: this.configService.get<string>('MQTT_USER'), password: this.configService.get<string>('MQTT_PASSWORD')}
+    const client  = mqtt.connect(this.configService.get<string>('mqtt.url'), options)
     const user = createTorrentDto.user;
     const system = "TorrentSystem";
     const message = createTorrentDto.link;
     const id = "in";
     
-    // TODO: Transformar isso aqui em metodo. A ideia eh q talvez o mqtt possa ser um bom metodo de comunicacao.
     client.on('connect', function () {
         const topic = `${user}/${system}/${id}`
         client.subscribe(topic);
@@ -28,6 +28,7 @@ export class TorrentsService {
     });
     
     client.on('message', function (topic, message){
+      
         client.end();
     })
     

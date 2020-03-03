@@ -7,12 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
+const mongoose_1 = require("@nestjs/mongoose");
+const torrent_schema_1 = require("./schemas/torrent.schema");
 const torrent_controller_1 = require("./torrent.controller");
 const torrent_service_1 = require("./torrent.service");
+const config_1 = require("@nestjs/config");
 let TorrentsModule = class TorrentsModule {
 };
 TorrentsModule = __decorate([
     common_1.Module({
+        imports: [
+            config_1.ConfigModule,
+            mongoose_1.MongooseModule.forFeature([{ name: 'Torrent', schema: torrent_schema_1.TorrentSchema }])
+        ],
         controllers: [torrent_controller_1.TorrentsController],
         providers: [torrent_service_1.TorrentsService],
     })
