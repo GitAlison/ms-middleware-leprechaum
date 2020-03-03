@@ -21,15 +21,16 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const users_service_1 = require("../users/users.service");
 const jwt_1 = require("@nestjs/jwt");
+const users_service_1 = require("../users/users.service");
 let AuthService = class AuthService {
     constructor(usersService, jwtService) {
         this.usersService = usersService;
         this.jwtService = jwtService;
     }
     async validateUser(username, pass) {
-        const user = await this.usersService.findOne(username);
+        console.log(username, pass);
+        const user = await this.usersService.findOne({ username: username });
         if (user && user.password === pass) {
             const { password } = user, result = __rest(user, ["password"]);
             return result;
