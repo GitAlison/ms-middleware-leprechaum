@@ -1334,11 +1334,11 @@
         "signature": "baf608b3f1bf90782d8b003287213bceae5e9b31f56c2ce676e223ea85ea10b2"
       },
       "../src/app.service.ts": {
-        "version": "51bcb491134542c36ae40c1dfff8067ab2c0a7788c39af729daab6c2153d8051",
+        "version": "95a6e2388c2038312796223e90f836b33872eb1f29ab2dfda3268e88020bf9d7",
         "signature": "5197aab28ee303c4ffeea8f0798c8d28c3542a76b11435ecb12267cca672dd53"
       },
       "../src/app.controller.ts": {
-        "version": "2f8418103b51d7366e312559b922625b87c4d953c581a0a9432cf6f95e3ff8c4",
+        "version": "752b943cf8bb136596b3718c9c608c4a2c6a7fa8d27949c5bcc819d22e972e68",
         "signature": "915db448bb95a3365b5a716fef8d7a1ebf8ac77db3334827349f5dceb25eba57"
       },
       "../node_modules/@nestjs/config/dist/config.service.d.ts": {
@@ -1418,7 +1418,7 @@
         "signature": "4d65c1cf2c61e430987e82fb595ba2d45d5bc5d29c05ee7ab57c081f60e1a875"
       },
       "../src/auth/auth.module.ts": {
-        "version": "e8fa939d88e57440e9a07cdf1d99438c1ebfea5982d9cce96c90d887dffd62e2",
+        "version": "2dc59d368435b597fe69adc52d2b936a6cb580ed66ac4e61c9bb31b480beefe3",
         "signature": "2e5d258cf85349b02b015c3f1b8873c152d182c3819a7ccc3aff16fc3037a5fc"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -1582,7 +1582,7 @@
         "signature": "9de913beea654d16f59d05fdc6904b4d4cf0129113c4c6985fd12fee10199cb4"
       },
       "../src/cats/cats.service.ts": {
-        "version": "38cba7986a1faeb9c43acca84f5157d9a4f76eec80ec07c67d2a22a3fbf3689b",
+        "version": "200dee0fffe91610602e810d216cf111d5e31b0b86a48b175ee6769f196d6c6e",
         "signature": "2a94aaa4075ee8176992bfa75ebe1d431a26a7b5bb63becc609850e67b7f0bfe"
       },
       "../src/cats/cats.controller.ts": {
@@ -1594,7 +1594,7 @@
         "signature": "d09e32a946f3ac1b84c0a48fb7e294fc9e3b52711b5b9a3285414e735e33f202"
       },
       "../src/cats/cats.module.ts": {
-        "version": "d2e13e37f4ad79411147b97c1d13de5cba65f110d41c26897c2ae8c56d637e38",
+        "version": "3f1baf27fa18f21a75d00f1087e09299a8f6f6edcd636251c906074ebb81a1d7",
         "signature": "1ba368845165f2342df237f9d80f114857d9c27dfedb161f52f1687e7cb05031"
       },
       "../src/config/configuration.ts": {
@@ -2025,6 +2025,18 @@
         "version": "eae2b7931b23669de29981e5e986bb725fdcf92d3878c2ab9f29dccd6250146c",
         "signature": "994c9d7b726bd25178469ef71fa4cb0789a11c968d0398146d88fc92ec40f9b1"
       },
+      "../src/telegrams/telegram.service.ts": {
+        "version": "ee6021e8bd6ef8878e8bd3ccf0cd03f83b078892b286ec9926bae907fe7a9b4e",
+        "signature": "9231979470872dadce318fd9ae4d17fa54e6be57fdac39558d489601a7dd7b59"
+      },
+      "../src/telegrams/telegram.controller.ts": {
+        "version": "ae9e94b3d9f32065db32abe0ecbc4765f73edb2dff450569bc90e80acf7836c1",
+        "signature": "9f909b47a10e9017c43b517c7b8a52d8b1e11d9f9295d22cb381c8b8aa5845e9"
+      },
+      "../src/telegrams/telegram.module.ts": {
+        "version": "187feceaa018b726dbf94be880e2937827603926527b91f299a9089ef48aa4fc",
+        "signature": "2b53cdcbded24f927e539ebc935f53578826e26acbb2bf88c6ef7719082ac610"
+      },
       "../src/torrents/schemas/torrent.schema.ts": {
         "version": "4bb73efbb8c5b218f9647f69ed2084043cbd896d77471134ec32685969074e4b",
         "signature": "43369133c46252441b00248f59851c3f0c93c63a3a41e27f36c7ffe14c7059c0"
@@ -2078,11 +2090,11 @@
         "signature": "8f505dadf7ec6a7605ea218a869aad104c26fff6465622c613e57a90e8a88a86"
       },
       "../src/app.module.ts": {
-        "version": "7facabae89f74b18fcd2ac64bf19a28524645c6e8abfd5111ce6efcae4124e97",
+        "version": "f33419e5610f9d001fc080fc88ddb44e90996c01f5cf2c7c2d3be7f325bbece4",
         "signature": "8a9b0ef8c541a1b6d4ea81f9fceb535f485ad6d4815999a1ce1f887d9722b3b5"
       },
       "../src/main.ts": {
-        "version": "35a7437a2b1195efd994573dbeae623c666c1e146ab8e1959c55a192799fb279",
+        "version": "37c732f36aa7cbd6ad4fc3cfde2c82d8821efb1af9645822d5b7a91eae978c31",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
       "../src/auth/auth.guard.ts": {
@@ -4397,6 +4409,7 @@
         "../src/auth/auth.service.ts",
         "../src/auth/jwt.strategy.ts",
         "../src/auth/local.strategy.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5408,6 +5421,27 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/telegrams/telegram.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/telegrams/telegram.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/auth/jwt-auth.guard.ts",
+        "../src/telegrams/telegram.service.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/telegrams/telegram.module.ts": [
+        "../src/telegrams/telegram.service.ts",
+        "../src/telegrams/telegram.controller.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/torrents/schemas/torrent.schema.ts": [
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
@@ -5503,6 +5537,7 @@
         "../src/cats/cats.module.ts",
         "../src/config/configuration.ts",
         "../src/core/core.module.ts",
+        "../src/telegrams/telegram.module.ts",
         "../src/torrents/torrent.module.ts",
         "../src/users/users.module.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8770,6 +8805,12 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/rxjs/index.d.ts"
       ],
+      "../src/telegrams/telegram.service.ts": [
+        "../node_modules/@nestjs/config/index.d.ts"
+      ],
+      "../src/telegrams/telegram.controller.ts": [
+        "../src/telegrams/telegram.service.ts"
+      ],
       "../node_modules/mqtt/types/lib/store-options.d.ts": [
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
@@ -9468,6 +9509,7 @@
       "../src/cats/cats.controller.ts",
       "../src/cats/schemas/cat.schema.ts",
       "../src/cats/cats.module.ts",
+      "../src/config/configuration.ts",
       "../node_modules/rxjs/internal/operators/audit.d.ts",
       "../node_modules/rxjs/internal/operators/audittime.d.ts",
       "../node_modules/rxjs/internal/operators/buffer.d.ts",
@@ -9574,6 +9616,7 @@
       "../src/core/interceptors/logging.interceptor.ts",
       "../src/core/interceptors/transform.interceptor.ts",
       "../src/core/core.module.ts",
+      "../src/telegrams/telegram.service.ts",
       "../src/torrents/schemas/torrent.schema.ts",
       "../src/torrents/dto/create-torrent.dto.ts",
       "../src/torrents/interfaces/torrent.interface.ts",
@@ -9584,6 +9627,10 @@
       "../node_modules/mqtt/types/lib/client.d.ts",
       "../node_modules/mqtt/types/lib/connect/index.d.ts",
       "../node_modules/mqtt/types/index.d.ts",
+      "../src/torrents/torrent.service.ts",
+      "../src/torrents/torrent.controller.ts",
+      "../src/torrents/torrent.module.ts",
+      "../src/app.module.ts",
       "../src/main.ts",
       "../src/auth/auth.guard.ts",
       "../src/common/decorators/roles.decorator.ts",
@@ -9633,11 +9680,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/config/configuration.ts",
-      "../src/torrents/torrent.service.ts",
-      "../src/torrents/torrent.controller.ts",
-      "../src/torrents/torrent.module.ts",
-      "../src/app.module.ts"
+      "../src/telegrams/telegram.controller.ts",
+      "../src/telegrams/telegram.module.ts"
     ]
   },
   "version": "3.7.2"

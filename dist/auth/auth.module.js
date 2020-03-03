@@ -13,15 +13,21 @@ const users_module_1 = require("../users/users.module");
 const auth_service_1 = require("./auth.service");
 const jwt_strategy_1 = require("./jwt.strategy");
 const local_strategy_1 = require("./local.strategy");
+const config_1 = require("@nestjs/config");
 let AuthModule = class AuthModule {
 };
 AuthModule = __decorate([
     common_1.Module({
         imports: [
+            config_1.ConfigModule,
             passport_1.PassportModule.register({ defaultStrategy: 'jwt' }),
-            jwt_1.JwtModule.register({
-                secret: process.env.JWT_SECRET_KEY,
-                signOptions: { expiresIn: process.env.JWT_EXPIRESIN },
+            jwt_1.JwtModule.registerAsync({
+                useFactory: async () => ({
+                    secret: process.env.JWT_SECRET_KEY,
+                    signOptions: {
+                        expiresIn: process.env.JWT_EXPIRESIN,
+                    },
+                }),
             }),
             users_module_1.UsersModule,
         ],

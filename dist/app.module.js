@@ -18,6 +18,7 @@ const auth_module_1 = require("./auth/auth.module");
 const cats_module_1 = require("./cats/cats.module");
 const configuration_1 = require("./config/configuration");
 const core_module_1 = require("./core/core.module");
+const telegram_module_1 = require("./telegrams/telegram.module");
 const torrent_module_1 = require("./torrents/torrent.module");
 const users_module_1 = require("./users/users.module");
 let AppModule = class AppModule {
@@ -28,6 +29,7 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     common_1.Module({
         imports: [
+            telegram_module_1.TelegramModule,
             config_1.ConfigModule.forRoot({
                 load: [configuration_1.default],
                 isGlobal: true,
@@ -47,9 +49,7 @@ AppModule = __decorate([
             auth_module_1.AuthModule,
             users_module_1.UsersModule
         ],
-        controllers: [
-            app_controller_1.AppController
-        ],
+        controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     }),
     __metadata("design:paramtypes", [config_1.ConfigService])

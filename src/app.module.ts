@@ -7,11 +7,13 @@ import { AuthModule } from './auth/auth.module';
 import { CatsModule } from './cats/cats.module';
 import configuration from './config/configuration';
 import { CoreModule } from './core/core.module';
+import { TelegramModule } from './telegrams/telegram.module';
 import { TorrentsModule } from './torrents/torrent.module';
 import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
+    TelegramModule,
     ConfigModule.forRoot({
       load: [configuration],
       isGlobal: true,
@@ -32,9 +34,7 @@ import { UsersModule } from './users/users.module';
     AuthModule,
     UsersModule
   ],
-  controllers: [
-    AppController
-  ],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {
