@@ -8,7 +8,8 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     ConfigModule,
-    MongooseModule.forFeature([{ name: 'Torrent', schema: TorrentSchema }])
+    MongooseModule.forFeature([{ name: 'Torrent', schema: TorrentSchema }]),
+    
   ],
   controllers: [TorrentsController],
   providers: [TorrentsService],
