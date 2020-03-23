@@ -4,10 +4,10 @@ import { CreateTorrentDto } from './dto/create-torrent.dto';
 import { Torrent } from './interfaces/torrent.interface';
 import { TorrentsService } from './torrent.service';
 
-@UseGuards(JwtAuthGuard)
+//@UseGuards(JwtAuthGuard)
 @Controller('torrents')
 export class TorrentsController {
-  constructor(private readonly torrentService: TorrentsService) {}
+  constructor(private readonly torrentService: TorrentsService) { }
 
   @Post()
   async create(@Body() createTorrentDto: CreateTorrentDto) {
@@ -26,8 +26,8 @@ export class TorrentsController {
 
   @Post(`find/:name`)
   async findName(@Param() name: string,
-  @Body() username:string
-  ){
+    @Body() username: string
+  ) {
     return this.torrentService.findName(name, username);
   }
 
@@ -35,12 +35,12 @@ export class TorrentsController {
   async update(
     @Param() name: string,
     @Body() createTorrentDto: CreateTorrentDto
-    ): Promise<Torrent[]> {
+  ): Promise<Torrent[]> {
     return this.torrentService.update(name, createTorrentDto);
   }
 
   @Delete(`/:username`)
-  async delete(@Param() username: string){
+  async delete(@Param() username: string) {
     return this.torrentService.delete(username);
   }
 

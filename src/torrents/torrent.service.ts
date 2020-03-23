@@ -14,8 +14,15 @@ export class TorrentsService {
     ) {}
 
   async create(createTorrentDto: CreateTorrentDto): Promise<Torrent> {
-    const options = {username: this.configService.get<string>('MQTT_USER'), password: this.configService.get<string>('MQTT_PASSWORD')}
-    const client  = mqtt.connect(this.configService.get<string>('mqtt.url'), options)
+    const MQTT_USER = this.configService.get<string>('MQTT_USER');
+    const MQTT_PASSWORD = this.configService.get<string>('MQTT_PASSWORD');
+    const MQTT_URL = this.configService.get<string>('MQTT_URL'); 
+    const MQTT_PORT = this.configService.get<string>('MQTT_PORT');
+    //const MQTT_LINK = [{host: MQTT_URL, port: MQTT_PORT}]
+    const MQTT_LINK = this.configService.get<string>('mqtt.url');
+    
+    const MQTT_OPTIONS = {username: MQTT_USER, password: MQTT_PASSWORD}
+    const client  = mqtt.connect(MQTT_LINK, MQTT_OPTIONS);
     const user = createTorrentDto.user;
     const system = "TorrentSystem";
     const message = createTorrentDto.link;
@@ -23,6 +30,7 @@ export class TorrentsService {
     
     client.on('connect', function () {
         const topic = `${user}/${system}/${id}`
+        console.log("Teste")
         client.subscribe(topic);
         client.publish(topic,message);
     });
