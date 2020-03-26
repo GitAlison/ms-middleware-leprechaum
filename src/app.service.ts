@@ -31,11 +31,14 @@ export class AppService {
             "Praise the young and they will flourish.",
             "The believer is happy, the doubter is wise.",
             "There is no need like the lack of a friend.",
-            "True strength lies in gentleness."
+            "True strength lies in gentleness.",
+            "Kaio: She speaks with you or only just answer you?",
+            '“Everywhere I go I find a poet has been there before me.”― Sigmund Freud',
+            '“Immorality, no less than morality, has at all times found support in religion.” ― Sigmund Freud',
+            '“No, our science is no illusion. But an illusion it would be to suppose that what science cannot give us we can get elsewhere.” ― Sigmund Freud',
+            '“The madman is a dreamer awake” ― Sigmund Freud',
+            
         ]
         return listPhrases[Math.floor(Math.random() * listPhrases.length)];
-     }
-     
-
-     
+     }    
 }
