@@ -11,23 +11,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const mongoose_1 = require("@nestjs/mongoose");
-const mongoose_2 = require("mongoose");
 const users_service_1 = require("../users/users.service");
 const mqtt = require("mqtt");
+const torrent_schema_1 = require("./schemas/torrent.schema");
 let TorrentsService = class TorrentsService {
-    constructor(configService, usersService, torrentModel) {
+    constructor(configService, usersService, TorrentModel) {
         this.configService = configService;
         this.usersService = usersService;
-        this.torrentModel = torrentModel;
+        this.TorrentModel = TorrentModel;
     }
     async create(createTorrentDto) {
         const MQTT_USER = this.configService.get('MQTT_USER');
         const MQTT_PASSWORD = this.configService.get('MQTT_PASSWORD');
+        const MQTT_URL = this.configService.get('MQTT_URL');
+        const MQTT_PORT = this.configService.get('MQTT_PORT');
         const MQTT_LINK = this.configService.get('mqtt.url');
         const MQTT_OPTIONS = { username: MQTT_USER, password: MQTT_PASSWORD };
         const client = mqtt.connect(MQTT_LINK, MQTT_OPTIONS);
@@ -41,6 +42,7 @@ let TorrentsService = class TorrentsService {
         }
         client.on('connect', function () {
             const topic = `${user}/${system}/${id}`;
+            console.log("Teste");
             client.subscribe(topic);
             client.publish(topic, message);
         });
@@ -51,24 +53,24 @@ let TorrentsService = class TorrentsService {
         if (name) {
             throw new common_1.HttpException('Media already exists in Database. Starting download', common_1.HttpStatus.ACCEPTED);
         }
-        const created = new this.torrentModel(createTorrentDto);
+        const created = new this.TorrentModel(createTorrentDto);
         created.save();
         return createTorrentDto;
     }
     async findAll() {
-        return this.torrentModel.find().exec();
+        return this.TorrentModel.find().exec();
     }
     async findTorrentByName(name) {
-        return this.torrentModel.findOne({ name: name }).exec();
+        return this.TorrentModel.findOne({ name: name }).exec();
     }
     async findAllUsername(username) {
-        return this.torrentModel.find({ user: username }).exec();
+        return this.TorrentModel.find({ user: username }).exec();
     }
     async findName(name, username) {
-        return this.torrentModel.find({ name: name, user: username }).exec();
+        return this.TorrentModel.find({ name: name, user: username }).exec();
     }
     async update(username, dto) {
-        const doc = await this.torrentModel.update(username);
+        const doc = await this.TorrentModel.update(username);
         if (!doc) {
             return `Not Updated`;
         }
@@ -76,14 +78,14 @@ let TorrentsService = class TorrentsService {
         return doc.save();
     }
     async delete(id) {
-        await this.torrentModel.findByIdAndDelete(id);
+        await this.TorrentModel.findByIdAndDelete(id);
     }
 };
 TorrentsService = __decorate([
     common_1.Injectable(),
-    __param(2, mongoose_1.InjectModel('Torrent')),
+    __param(2, mongoose_1.InjectModel(torrent_schema_1.TorrentFeatureProvider.name)),
     __metadata("design:paramtypes", [config_1.ConfigService,
-        users_service_1.UsersService, typeof (_a = typeof mongoose_2.Model !== "undefined" && mongoose_2.Model) === "function" ? _a : Object])
+        users_service_1.UsersService, Object])
 ], TorrentsService);
 exports.TorrentsService = TorrentsService;
 //# sourceMappingURL=torrent.service.js.map

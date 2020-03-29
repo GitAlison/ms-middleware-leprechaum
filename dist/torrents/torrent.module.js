@@ -21,8 +21,8 @@ TorrentsModule = __decorate([
         imports: [
             config_1.ConfigModule,
             mongoose_1.MongooseModule.forFeature([
-                { name: 'Torrent', schema: torrent_schema_1.TorrentSchema },
-                { name: 'User', schema: users_schema_1.UserSchema },
+                torrent_schema_1.TorrentFeatureProvider,
+                users_schema_1.UserFeatureProvider
             ]),
         ],
         controllers: [torrent_controller_1.TorrentsController],

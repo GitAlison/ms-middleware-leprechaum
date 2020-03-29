@@ -1,13 +1,13 @@
 import { ConfigService } from '@nestjs/config';
-import { Model } from 'mongoose';
 import { UsersService } from '../users/users.service';
 import { CreateTorrentDto } from './dto/create-torrent.dto';
-import { Torrent } from './interfaces/torrent.interface';
+import { Torrent } from './schemas/torrent.schema';
+import { ReturnModelType } from '@typegoose/typegoose';
 export declare class TorrentsService {
     private readonly configService;
     private readonly usersService;
-    private readonly torrentModel;
-    constructor(configService: ConfigService, usersService: UsersService, torrentModel: Model<Torrent>);
+    private readonly TorrentModel;
+    constructor(configService: ConfigService, usersService: UsersService, TorrentModel: ReturnModelType<typeof Torrent>);
     create(createTorrentDto: CreateTorrentDto): Promise<CreateTorrentDto>;
     findAll(): Promise<any>;
     findTorrentByName(name: any): Promise<any>;
