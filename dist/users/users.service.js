@@ -24,10 +24,10 @@ let UsersService = class UsersService {
         return created.save();
     }
     async findAll() {
-        return this.userModel.find().exec();
+        return this.userModel.find({}).exec();
     }
-    async findOne(username) {
-        return this.userModel.findOne({ name: username }).exec();
+    async findOnebyUsername(username) {
+        return this.userModel.findOne({ username: username }).exec();
     }
     async update(username, dto) {
         const doc = await this.userModel.update(username);

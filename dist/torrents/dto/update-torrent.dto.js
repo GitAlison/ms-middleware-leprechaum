@@ -10,23 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const class_validator_1 = require("class-validator");
-class CreateTorrentDto {
+class UpdateTorrentDto {
 }
 __decorate([
     class_validator_1.IsString(),
     __metadata("design:type", String)
-], CreateTorrentDto.prototype, "user", void 0);
+], UpdateTorrentDto.prototype, "user", void 0);
 __decorate([
     class_validator_1.IsString(),
     __metadata("design:type", String)
-], CreateTorrentDto.prototype, "name", void 0);
+], UpdateTorrentDto.prototype, "name", void 0);
 __decorate([
     class_validator_1.IsString(),
     __metadata("design:type", String)
-], CreateTorrentDto.prototype, "type", void 0);
+], UpdateTorrentDto.prototype, "type", void 0);
 __decorate([
     class_validator_1.IsObject(),
     __metadata("design:type", Array)
-], CreateTorrentDto.prototype, "links", void 0);
-exports.CreateTorrentDto = CreateTorrentDto;
-//# sourceMappingURL=create-torrent.dto.js.map
+], UpdateTorrentDto.prototype, "links", void 0);
+exports.UpdateTorrentDto = UpdateTorrentDto;
+//# sourceMappingURL=update-torrent.dto.js.map

@@ -10,6 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typegoose_1 = require("@typegoose/typegoose");
+var type;
+(function (type) {
+    type["movie"] = "movie";
+    type["serie"] = "serie";
+})(type || (type = {}));
 class Torrent {
 }
 __decorate([
@@ -21,14 +26,24 @@ __decorate([
     __metadata("design:type", String)
 ], Torrent.prototype, "name", void 0);
 __decorate([
-    typegoose_1.prop({ required: false }),
+    typegoose_1.prop({ required: false, enum: type }),
     __metadata("design:type", String)
 ], Torrent.prototype, "type", void 0);
 __decorate([
+    typegoose_1.arrayProp({ items: Object }),
+    __metadata("design:type", Array)
+], Torrent.prototype, "links", void 0);
+exports.Torrent = Torrent;
+class quality {
+}
+__decorate([
     typegoose_1.prop({ required: true }),
     __metadata("design:type", String)
-], Torrent.prototype, "link", void 0);
-exports.Torrent = Torrent;
+], quality.prototype, "name", void 0);
+__decorate([
+    typegoose_1.prop({ required: true }),
+    __metadata("design:type", String)
+], quality.prototype, "url", void 0);
 const TorrentModel = typegoose_1.getModelForClass(Torrent);
 const TorrentSchema = typegoose_1.buildSchema(Torrent, { versionKey: false });
 exports.TorrentFeatureProvider = {

@@ -1,8 +1,9 @@
 import { ConfigService } from '@nestjs/config';
+import { ReturnModelType } from '@typegoose/typegoose';
 import { UsersService } from '../users/users.service';
 import { CreateTorrentDto } from './dto/create-torrent.dto';
+import { UpdateTorrentDto } from './dto/update-torrent.dto';
 import { Torrent } from './schemas/torrent.schema';
-import { ReturnModelType } from '@typegoose/typegoose';
 export declare class TorrentsService {
     private readonly configService;
     private readonly usersService;
@@ -13,6 +14,6 @@ export declare class TorrentsService {
     findTorrentByName(name: any): Promise<any>;
     findAllUsername(username: any): Promise<any>;
     findName(name: any, username: any): Promise<any>;
-    update(username: string, dto: CreateTorrentDto): Promise<any>;
+    update(dto: UpdateTorrentDto): Promise<any>;
     delete(id: string): Promise<void>;
 }

@@ -6,7 +6,7 @@ export declare class UsersService {
     constructor(userModel: ReturnModelType<typeof User>);
     create(createUserDto: CreateUserDto): Promise<User>;
     findAll(): Promise<any>;
-    findOne(username: any): Promise<any>;
+    findOnebyUsername(username: any): Promise<any>;
     update(username: string, dto: CreateUserDto): Promise<any>;
     delete(username: string): Promise<void>;
 }

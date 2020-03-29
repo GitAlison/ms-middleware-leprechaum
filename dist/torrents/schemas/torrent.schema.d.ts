@@ -2,7 +2,7 @@ export declare class Torrent {
     user: string;
     name: string;
     type: string;
-    link: string;
+    links?: Object[];
 }
 export declare const TorrentFeatureProvider: {
     name: string;

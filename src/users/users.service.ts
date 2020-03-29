@@ -18,11 +18,12 @@ export class UsersService {
   }
 
   // Read
-  async findAll() {
-    return this.userModel.find().exec();
+  public async findAll() {
+    return this.userModel.find({}).exec();
   }
-  async findOne(username) {
-    return this.userModel.findOne({ name: username }).exec();
+
+  public async findOnebyUsername(username) {
+    return this.userModel.findOne({username:username}).exec();
   }
 
   // Update
