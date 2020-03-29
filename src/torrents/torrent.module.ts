@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { UserSchema } from '../users/schemas/users.schema';
+import { UserFeatureProvider } from '../users/schemas/users.schema';
 import { UsersService } from '../users/users.service';
-import { TorrentSchema } from './schemas/torrent.schema';
+import { TorrentFeatureProvider } from './schemas/torrent.schema';
 import { TorrentsController } from './torrent.controller';
 import { TorrentsService } from './torrent.service';
 
@@ -11,8 +11,8 @@ import { TorrentsService } from './torrent.service';
   imports: [
     ConfigModule,
     MongooseModule.forFeature([
-      { name: 'Torrent', schema: TorrentSchema },
-      { name: 'User', schema: UserSchema },
+      TorrentFeatureProvider,
+      UserFeatureProvider
     ]),
 
   ],
