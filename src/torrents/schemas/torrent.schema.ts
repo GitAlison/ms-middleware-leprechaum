@@ -1,4 +1,9 @@
-import { buildSchema, getModelForClass, prop } from '@typegoose/typegoose';
+import { arrayProp, buildSchema, getModelForClass, prop } from '@typegoose/typegoose';
+
+enum type {
+  movie = 'movie',
+  serie = 'serie',
+}
 
 export class Torrent {
   @prop({ required: true })
@@ -7,11 +12,19 @@ export class Torrent {
   @prop({ required: true })
   public name: string;
 
-  @prop({ required: false })
+  @prop({ required: false, enum: type })
   public type: string;
 
+  @arrayProp({ items: Object })
+  public links?: Object[];
+}
+
+class quality {
   @prop({ required: true })
-  public link: string;
+  public name: string;
+
+  @prop({ required: true })
+  public url: string;
 }
 
 const TorrentModel = getModelForClass(Torrent);

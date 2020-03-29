@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const create_torrent_dto_1 = require("./dto/create-torrent.dto");
 const torrent_service_1 = require("./torrent.service");
+const update_torrent_dto_1 = require("./dto/update-torrent.dto");
 let TorrentsController = class TorrentsController {
     constructor(torrentService) {
         this.torrentService = torrentService;
@@ -31,8 +32,8 @@ let TorrentsController = class TorrentsController {
     async findName(name, username) {
         return this.torrentService.findName(name, username);
     }
-    async update(name, createTorrentDto) {
-        return this.torrentService.update(name, createTorrentDto);
+    async update(updateTorrentDto) {
+        return this.torrentService.update(updateTorrentDto);
     }
     async delete(username) {
         return this.torrentService.delete(username);
@@ -67,11 +68,10 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], TorrentsController.prototype, "findName", null);
 __decorate([
-    common_1.Put(`/:name`),
-    __param(0, common_1.Param()),
-    __param(1, common_1.Body()),
+    common_1.Put('/'),
+    __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, create_torrent_dto_1.CreateTorrentDto]),
+    __metadata("design:paramtypes", [update_torrent_dto_1.UpdateTorrentDto]),
     __metadata("design:returntype", Promise)
 ], TorrentsController.prototype, "update", null);
 __decorate([

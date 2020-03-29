@@ -3,6 +3,7 @@ import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { CreateTorrentDto } from './dto/create-torrent.dto';
 import { Torrent } from './interfaces/torrent.interface';
 import { TorrentsService } from './torrent.service';
+import { UpdateTorrentDto } from './dto/update-torrent.dto';
 
 //@UseGuards(JwtAuthGuard)
 @Controller('torrents')
@@ -31,12 +32,11 @@ export class TorrentsController {
     return this.torrentService.findName(name, username);
   }
 
-  @Put(`/:name`)
+  @Put('/')
   async update(
-    @Param() name: string,
-    @Body() createTorrentDto: CreateTorrentDto
-  ): Promise<Torrent[]> {
-    return this.torrentService.update(name, createTorrentDto);
+     @Body() updateTorrentDto: UpdateTorrentDto
+  ){
+    return this.torrentService.update(updateTorrentDto);
   }
 
   @Delete(`/:username`)

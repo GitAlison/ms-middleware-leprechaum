@@ -20,8 +20,8 @@ export class UsersController {
   }
 
   @Get(`:username`)
-  async findOne(@Param() username: string){
-    return this.usersService.findOne(username);
+  async findOnebyUsername(@Param('username') username: string){
+    return this.usersService.findOnebyUsername(username);
   }
 
   @Put(`:username`)

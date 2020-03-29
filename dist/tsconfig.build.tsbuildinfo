@@ -1378,11 +1378,11 @@
         "signature": "c7fb84801f1237d8aecef7ac60dd7cf372d6a11eb5565035b5b08878869ca82e"
       },
       "../src/users/users.service.ts": {
-        "version": "35c6bd8062e339bb7e72d33c724f1b9a21685fb864d27b094645708aa1f18ce3",
-        "signature": "b36790fee36a5257d12c31e86304857da3e073e6e2082768f4ac1483f859a6ac"
+        "version": "6e7e7caa875144237112270e34701dcc9b8829ecff2380c54c28c3cd3568bb65",
+        "signature": "a92a10eeeedb2c21360a6ccebfb1f2effc7e6a1bd9ceaa26767ad1ca91de35df"
       },
       "../src/auth/auth.service.ts": {
-        "version": "0283d3e600667909689746979d335dc34813cfe438abc4be08576c5b64db51ee",
+        "version": "a5c0a5063a774be92b4b3b8ccc2c0c11f077ef5d02eb6715747b11e8e2b649f9",
         "signature": "a3a68df64452808891e24d7ee9814943e1180f912bcc10446d8976cfbb7dc400"
       },
       "../src/auth/jwt-auth.guard.ts": {
@@ -1446,8 +1446,8 @@
         "signature": "f031a43aa24e6b6295ac3ba8e780b54d8c887eb2f7a95f3fce04f5d4bf424726"
       },
       "../src/users/users.controller.ts": {
-        "version": "bb41154b4562e7f8755829bc34c87538637899af24cfa35f50603350ca320e95",
-        "signature": "cf4e4669c93f340ef09e358a949233412eb85695cdba1788a4e217e12af65267"
+        "version": "bcead32c365e0ffb82fd69c5fbf752305ea787c759132c74dbabaaf8550aa043",
+        "signature": "70707d418ec65299e1bfdcbd15e7bbfa966f1f2f02f47d98eebff99704b445fe"
       },
       "../src/users/users.module.ts": {
         "version": "cc2d7548cf920789da6afff5df90c49ad10f4cafab33e7b1f2086e3e303fe9fb",
@@ -2050,16 +2050,20 @@
         "signature": "994c9d7b726bd25178469ef71fa4cb0789a11c968d0398146d88fc92ec40f9b1"
       },
       "../src/torrents/schemas/torrent.schema.ts": {
-        "version": "c477e49086441bd16725c3e5f619cfe908c6ca8885454f106f56a836e7f5b755",
-        "signature": "c3d29bea2cd810acde5af1b727714f6ebf6050532f4e5ab7212542c1d922acd7"
+        "version": "71763ed13da3e3ac439e68b8f1835ed0d030f6a986d11c953bf8c2255347f2db",
+        "signature": "c875e42213980d9155e330c4cfd0ce811fc83a447942ac21422ce2dbeb7df894"
       },
       "../src/torrents/dto/create-torrent.dto.ts": {
-        "version": "1b9539f81b31532ec15fb54b0a2b8fe1378e30f9ed62196db116369467402c46",
-        "signature": "9447d39d2c4394cf841df2aeeba544824b9c445e4ac6b21227c805d2abe277d1"
+        "version": "f5df657043d4cd1e15d603e7974d09bed23426d31cabf186af2d0f61fcb24d04",
+        "signature": "ac0da81a096581238aef2624cf71f46f67cb2a002073479f0f56994e6a7b7a37"
       },
       "../src/torrents/interfaces/torrent.interface.ts": {
-        "version": "97fddc85a56c832e8ba8328d73c7f2eeba9bbda090eed69e52ae9b49749e0a8d",
-        "signature": "a0ad2949a05cd21f9a0a431ff30bdcfa2db0b7ca5cb7adb84d448b71ac3058ee"
+        "version": "5b98fc5c73e3cd63bd9900221876e3c83469baae39ba9e6e082c58339462c016",
+        "signature": "78c92f579e4e338e18b8f69a6fef3d168b0aefeaa0285f6e915e5f9b0d7f2463"
+      },
+      "../src/torrents/dto/update-torrent.dto.ts": {
+        "version": "06fbea21c6ba1f9a8f3e9bd7f902b119c7f6733c67a497195479414d6b517976",
+        "signature": "f0064c702adc44c60509e06ed6b99f8b5886e487ebd9b06ed368121e00219eb2"
       },
       "../node_modules/mqtt/types/lib/store-options.d.ts": {
         "version": "9f9d349e4470d8ae1e516ec63927a2b25a4f6d77b8cc3bb3db055df8e707541c",
@@ -2090,12 +2094,12 @@
         "signature": "f9db4270e624f75d61a7f85379a870b18205357c821fbae53b97a7ead70b07c5"
       },
       "../src/torrents/torrent.service.ts": {
-        "version": "6e1358c006146fd1656fcf07fce70cbcf337028ca95a0d5140c934d866c59cb2",
-        "signature": "346ec88254816c1bcee389b5a79974e6f1a6c7be489de1a981c6b04d039cd476"
+        "version": "e518566e2578c2bdfcc1191931a7c6b040d9a89ebc956b5a6ce6a87b12fe1ad0",
+        "signature": "b015b7461acefbfb23cea1b1f312b6ed429f4bb3ddb2c13a4175bf35f530bb23"
       },
       "../src/torrents/torrent.controller.ts": {
-        "version": "b4030e287d87e1078e7518252f3167136e380895efdc954ed410b7a0cfbad083",
-        "signature": "ed71e8550b2b2ba32c72efebd22c4ce747ccc8eac2895e1932609f2628f03971"
+        "version": "3541476c3f620b4247927061532bbb6d113861c4732d6bd9ba0cb2b155ef81c6",
+        "signature": "987a9457fe04521ad55bd8427cca61d2486f77e4297374441ed9c7a3cf55af02"
       },
       "../src/torrents/torrent.module.ts": {
         "version": "0964d92aa68f6a7a907879e0eb6d3f71429946748c420f00e9dea6bf71b725e1",
@@ -5489,6 +5493,11 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/torrents/dto/update-torrent.dto.ts": [
+        "../node_modules/class-validator/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../node_modules/mqtt/types/lib/store-options.d.ts": [
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
@@ -5536,11 +5545,12 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@typegoose/typegoose/lib/typegoose.d.ts",
         "../src/users/users.service.ts",
         "../src/torrents/dto/create-torrent.dto.ts",
-        "../node_modules/mqtt/types/index.d.ts",
+        "../src/torrents/dto/update-torrent.dto.ts",
         "../src/torrents/schemas/torrent.schema.ts",
-        "../node_modules/@typegoose/typegoose/lib/typegoose.d.ts",
+        "../node_modules/mqtt/types/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5550,6 +5560,7 @@
         "../src/torrents/dto/create-torrent.dto.ts",
         "../src/torrents/interfaces/torrent.interface.ts",
         "../src/torrents/torrent.service.ts",
+        "../src/torrents/dto/update-torrent.dto.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -8969,12 +8980,13 @@
         "../src/users/users.service.ts",
         "../node_modules/@typegoose/typegoose/lib/typegoose.d.ts",
         "../src/torrents/schemas/torrent.schema.ts",
-        "../src/torrents/dto/create-torrent.dto.ts"
+        "../src/torrents/dto/create-torrent.dto.ts",
+        "../src/torrents/dto/update-torrent.dto.ts"
       ],
       "../src/torrents/torrent.controller.ts": [
         "../src/torrents/torrent.service.ts",
         "../src/torrents/dto/create-torrent.dto.ts",
-        "../src/torrents/interfaces/torrent.interface.ts"
+        "../src/torrents/dto/update-torrent.dto.ts"
       ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/config/index.d.ts"
@@ -9572,8 +9584,12 @@
       "../node_modules/class-validator/metadata/metadatastorage.d.ts",
       "../node_modules/class-validator/index.d.ts",
       "../src/users/dto/create-user.dto.ts",
+      "../src/users/schemas/users.schema.ts",
+      "../src/users/users.service.ts",
+      "../src/auth/auth.service.ts",
       "../src/auth/jwt-auth.guard.ts",
       "../src/app.service.ts",
+      "../src/app.controller.ts",
       "../node_modules/@nestjs/config/dist/config.service.d.ts",
       "../node_modules/@nestjs/config/dist/interfaces/config-factory.interface.d.ts",
       "../node_modules/@nestjs/config/dist/interfaces/config-module-options.interface.d.ts",
@@ -9586,10 +9602,14 @@
       "../node_modules/@nestjs/config/dist/index.d.ts",
       "../node_modules/@nestjs/config/index.d.ts",
       "../src/users/interfaces/users.interface.ts",
+      "../src/users/users.controller.ts",
+      "../src/users/users.module.ts",
       "../node_modules/@types/passport-strategy/index.d.ts",
       "../node_modules/@types/passport-jwt/index.d.ts",
       "../src/auth/jwt.strategy.ts",
       "../node_modules/@types/passport-local/index.d.ts",
+      "../src/auth/local.strategy.ts",
+      "../src/auth/auth.module.ts",
       "../src/config/configuration.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
@@ -9794,17 +9814,10 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/users/schemas/users.schema.ts",
-      "../src/users/users.service.ts",
+      "../src/torrents/dto/update-torrent.dto.ts",
       "../src/torrents/torrent.service.ts",
-      "../src/users/users.controller.ts",
-      "../src/auth/auth.service.ts",
-      "../src/app.controller.ts",
-      "../src/users/users.module.ts",
-      "../src/auth/local.strategy.ts",
-      "../src/auth/auth.module.ts",
-      "../src/torrents/torrent.controller.ts",
       "../src/torrents/torrent.module.ts",
+      "../src/torrents/torrent.controller.ts",
       "../src/app.module.ts"
     ]
   },

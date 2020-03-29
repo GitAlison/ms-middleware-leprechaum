@@ -1,11 +1,13 @@
 import { IsString, IsObject } from 'class-validator';
 
-export class CreateTorrentDto {
+export class UpdateTorrentDto {
   @IsString()
-  readonly user: string;
+  readonly user?: string;
 
   @IsString()
   readonly name?: string;
+  
+  readonly newname?: string;
 
   @IsString()
   readonly type?: string;

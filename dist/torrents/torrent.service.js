@@ -16,8 +16,9 @@ const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const mongoose_1 = require("@nestjs/mongoose");
 const users_service_1 = require("../users/users.service");
-const mqtt = require("mqtt");
+const update_torrent_dto_1 = require("./dto/update-torrent.dto");
 const torrent_schema_1 = require("./schemas/torrent.schema");
+const mqtt = require("mqtt");
 let TorrentsService = class TorrentsService {
     constructor(configService, usersService, TorrentModel) {
         this.configService = configService;
@@ -34,9 +35,9 @@ let TorrentsService = class TorrentsService {
         const client = mqtt.connect(MQTT_LINK, MQTT_OPTIONS);
         const user = createTorrentDto.user;
         const system = "TorrentSystem";
-        const message = createTorrentDto.link;
+        const message = createTorrentDto.links;
         const id = "in";
-        const myUser = await this.usersService.findOne(user);
+        const myUser = await this.usersService.findOnebyUsername(user);
         if (!myUser) {
             throw new common_1.HttpException(`User: ${user} don't exist`, common_1.HttpStatus.FORBIDDEN);
         }
@@ -44,15 +45,11 @@ let TorrentsService = class TorrentsService {
             const topic = `${user}/${system}/${id}`;
             console.log("Teste");
             client.subscribe(topic);
-            client.publish(topic, message);
+            client.publish(topic, message.toString());
         });
         client.on('message', function (topic, message) {
             client.end();
         });
-        const name = await this.findTorrentByName(createTorrentDto.name);
-        if (name) {
-            throw new common_1.HttpException('Media already exists in Database. Starting download', common_1.HttpStatus.ACCEPTED);
-        }
         const created = new this.TorrentModel(createTorrentDto);
         created.save();
         return createTorrentDto;
@@ -69,10 +66,14 @@ let TorrentsService = class TorrentsService {
     async findName(name, username) {
         return this.TorrentModel.find({ name: name, user: username }).exec();
     }
-    async update(username, dto) {
-        const doc = await this.TorrentModel.update(username);
+    async update(dto) {
+        const name = update_torrent_dto_1.UpdateTorrentDto.name;
+        const doc = await this.findTorrentByName({ name: name });
         if (!doc) {
-            return `Not Updated`;
+            throw new common_1.HttpException('Media Not found', common_1.HttpStatus.NOT_FOUND);
+        }
+        if (dto.newname) {
+            doc.name = dto.newname;
         }
         doc.set(dto);
         return doc.save();

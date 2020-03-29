@@ -26,8 +26,8 @@ let UsersController = class UsersController {
     async findAll() {
         return this.usersService.findAll();
     }
-    async findOne(username) {
-        return this.usersService.findOne(username);
+    async findOnebyUsername(username) {
+        return this.usersService.findOnebyUsername(username);
     }
     async update(username, createUserDto) {
         return this.usersService.update(username, createUserDto);
@@ -51,11 +51,11 @@ __decorate([
 ], UsersController.prototype, "findAll", null);
 __decorate([
     common_1.Get(`:username`),
-    __param(0, common_1.Param()),
+    __param(0, common_1.Param('username')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
-], UsersController.prototype, "findOne", null);
+], UsersController.prototype, "findOnebyUsername", null);
 __decorate([
     common_1.Put(`:username`),
     __param(0, common_1.Param()),
