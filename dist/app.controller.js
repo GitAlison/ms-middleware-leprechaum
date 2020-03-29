@@ -28,8 +28,8 @@ let AppController = class AppController {
     async login(req) {
         return this.authService.login(req.user);
     }
-    getProfile(req) {
-        return req.user;
+    validate() {
+        return true;
     }
 };
 __decorate([
@@ -48,12 +48,11 @@ __decorate([
 ], AppController.prototype, "login", null);
 __decorate([
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
-    common_1.Get('profile'),
-    __param(0, common_1.Request()),
+    common_1.Get('/validate'),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
-], AppController.prototype, "getProfile", null);
+], AppController.prototype, "validate", null);
 AppController = __decorate([
     common_1.Controller(),
     __metadata("design:paramtypes", [app_service_1.AppService,

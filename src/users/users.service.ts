@@ -22,7 +22,7 @@ export class UsersService {
     return this.userModel.find().exec();
   }
   async findOne(username){
-    return this.userModel.findOne(username).exec();
+    return this.userModel.findOne({name: username}).exec();
   }
 
   // Update

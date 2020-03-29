@@ -13,7 +13,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const jwt_auth_guard_1 = require("../auth/jwt-auth.guard");
 const create_torrent_dto_1 = require("./dto/create-torrent.dto");
 const torrent_service_1 = require("./torrent.service");
 let TorrentsController = class TorrentsController {
@@ -21,7 +20,7 @@ let TorrentsController = class TorrentsController {
         this.torrentService = torrentService;
     }
     async create(createTorrentDto) {
-        this.torrentService.create(createTorrentDto);
+        return this.torrentService.create(createTorrentDto);
     }
     async findAll() {
         return this.torrentService.findAll();
@@ -83,7 +82,6 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], TorrentsController.prototype, "delete", null);
 TorrentsController = __decorate([
-    common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Controller('torrents'),
     __metadata("design:paramtypes", [torrent_service_1.TorrentsService])
 ], TorrentsController);

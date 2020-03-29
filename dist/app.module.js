@@ -15,10 +15,8 @@ const mongoose_1 = require("@nestjs/mongoose");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const auth_module_1 = require("./auth/auth.module");
-const cats_module_1 = require("./cats/cats.module");
 const configuration_1 = require("./config/configuration");
 const core_module_1 = require("./core/core.module");
-const telegram_module_1 = require("./telegrams/telegram.module");
 const torrent_module_1 = require("./torrents/torrent.module");
 const users_module_1 = require("./users/users.module");
 let AppModule = class AppModule {
@@ -29,7 +27,6 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     common_1.Module({
         imports: [
-            telegram_module_1.TelegramModule,
             config_1.ConfigModule.forRoot({
                 load: [configuration_1.default],
                 isGlobal: true,
@@ -44,7 +41,6 @@ AppModule = __decorate([
                 inject: [config_1.ConfigService],
             }),
             core_module_1.CoreModule,
-            cats_module_1.CatsModule,
             torrent_module_1.TorrentsModule,
             auth_module_1.AuthModule,
             users_module_1.UsersModule
