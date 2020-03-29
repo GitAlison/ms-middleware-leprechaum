@@ -11,7 +11,7 @@ export class TorrentsController {
 
   @Post()
   async create(@Body() createTorrentDto: CreateTorrentDto) {
-    this.torrentService.create(createTorrentDto);
+    return this.torrentService.create(createTorrentDto);
   }
 
   @Get()

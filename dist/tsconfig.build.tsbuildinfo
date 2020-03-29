@@ -1322,11 +1322,11 @@
         "signature": "f031a43aa24e6b6295ac3ba8e780b54d8c887eb2f7a95f3fce04f5d4bf424726"
       },
       "../src/users/users.service.ts": {
-        "version": "cdfa2d941d5fcaa68bce938d0d81fd4151584a89b99778d7749ad44b7bcbe562",
+        "version": "4daed679d9cc05bad91ed4aa20949a3712e486cb5af20a415d7f0116f308ebff",
         "signature": "2d33c53f50b75f44b9e9ae276c944bbe0f97c5dc5d03d2fdcdf403caff7949f1"
       },
       "../src/auth/auth.service.ts": {
-        "version": "0f4f78a898021afbd047cbd2fe4aeacf4e0f3013595101ba3c4568a77038e716",
+        "version": "0283d3e600667909689746979d335dc34813cfe438abc4be08576c5b64db51ee",
         "signature": "a3a68df64452808891e24d7ee9814943e1180f912bcc10446d8976cfbb7dc400"
       },
       "../src/auth/jwt-auth.guard.ts": {
@@ -1334,12 +1334,12 @@
         "signature": "baf608b3f1bf90782d8b003287213bceae5e9b31f56c2ce676e223ea85ea10b2"
       },
       "../src/app.service.ts": {
-        "version": "95a6e2388c2038312796223e90f836b33872eb1f29ab2dfda3268e88020bf9d7",
+        "version": "62ac738a4a216410a36d68afde0fda0d8b8026a8fa546234bfae59e344bdecd7",
         "signature": "5197aab28ee303c4ffeea8f0798c8d28c3542a76b11435ecb12267cca672dd53"
       },
       "../src/app.controller.ts": {
-        "version": "752b943cf8bb136596b3718c9c608c4a2c6a7fa8d27949c5bcc819d22e972e68",
-        "signature": "915db448bb95a3365b5a716fef8d7a1ebf8ac77db3334827349f5dceb25eba57"
+        "version": "92205530807536f49cae14842a698857a4f612aed402816809374cae400c2e66",
+        "signature": "2ffa08b6c515f5831f26b38816c78e663bcfa1bf5fb6685276d80e207e26f76f"
       },
       "../node_modules/@nestjs/config/dist/config.service.d.ts": {
         "version": "22d6c266337a240cae9f6d837927706afd1f2ca66318e95bfae92d0830bdb68c",
@@ -1390,8 +1390,8 @@
         "signature": "9368bf8d6c6ae153c57a9244bb5531f30a99c7961d2e19cbf1522795a0118c97"
       },
       "../src/users/users.controller.ts": {
-        "version": "87dfbc5f545f605497c3d99d60ea6ac2b1541c158485c6bbe38a8153ef4ff307",
-        "signature": "23ebb1fd353d0dc1a088ab9114cc8a8ca3d143479e195bb76ef12328d36c84ec"
+        "version": "bb41154b4562e7f8755829bc34c87538637899af24cfa35f50603350ca320e95",
+        "signature": "2514c6eef18870b53361c0826386401ca5abcc94d8184e0720d20e01f46185d5"
       },
       "../src/users/users.module.ts": {
         "version": "54f15ea5f87a2df7b1a8c8826274ec09ee57516466326669881b965d020a82e8",
@@ -1420,6 +1420,10 @@
       "../src/auth/auth.module.ts": {
         "version": "2dc59d368435b597fe69adc52d2b936a6cb580ed66ac4e61c9bb31b480beefe3",
         "signature": "2e5d258cf85349b02b015c3f1b8873c152d182c3819a7ccc3aff16fc3037a5fc"
+      },
+      "../src/config/configuration.ts": {
+        "version": "3ef8a3d1118c49f302b217c9614a1e8607ccf668c7d96b4a0863a831ca5606d2",
+        "signature": "5d0ab11fd9c825781336c555adf24b55315cd637a23056b7718416aa72e1169c"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
         "version": "71cc7da1ef9d96f44a214a43017535538b47988d4bc9dedbf7592d2f9fe10da9",
@@ -1564,42 +1568,6 @@
       "../node_modules/@nestjs/core/index.d.ts": {
         "version": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d",
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d"
-      },
-      "../src/common/guards/roles.guard.ts": {
-        "version": "fa73ca8848690e4edc594bf3f2c218fe3e7d90feb445fe71bca8b57e298ebf8a",
-        "signature": "2034addee7c54c9756a5bca03bf90600cec6aca19627c71b632cfaef2e62a954"
-      },
-      "../src/common/pipes/parse-int.pipe.ts": {
-        "version": "921c05f9b03de15282e3bd4aa64fb8c30525226789656674dec2575cbcd58970",
-        "signature": "bd51a8bd8cab9b38ac28d0812f12e9f85c1733d2e945a893619de212b8e7b0b9"
-      },
-      "../src/cats/dto/create-cat.dto.ts": {
-        "version": "0368c5105cfd2104cd821b5111f32a50890eba25465b7180c3eb1b36cbd6b89f",
-        "signature": "72d399a1fd1ef592439b8de5ac72851633b601abcb0d3f6b4cc7e9715c8d2643"
-      },
-      "../src/cats/interfaces/cat.interface.ts": {
-        "version": "2eeeee520e981a09fbcee129cce465af123aefd07e90fa8d7c1a8334dddadb1f",
-        "signature": "9de913beea654d16f59d05fdc6904b4d4cf0129113c4c6985fd12fee10199cb4"
-      },
-      "../src/cats/cats.service.ts": {
-        "version": "200dee0fffe91610602e810d216cf111d5e31b0b86a48b175ee6769f196d6c6e",
-        "signature": "2a94aaa4075ee8176992bfa75ebe1d431a26a7b5bb63becc609850e67b7f0bfe"
-      },
-      "../src/cats/cats.controller.ts": {
-        "version": "2cc65f00f57fd7bd1c39c4f75b98e8691d0c93a6dc0bf65b4698d77b69f16ee7",
-        "signature": "90fb054a46f68b9135018eef3a873bd30b4a77792d5ed5a3481ba758ef8e81a2"
-      },
-      "../src/cats/schemas/cat.schema.ts": {
-        "version": "8161586d699319580862b385d4871b9068149915d5e003935e7984c81581f2e0",
-        "signature": "d09e32a946f3ac1b84c0a48fb7e294fc9e3b52711b5b9a3285414e735e33f202"
-      },
-      "../src/cats/cats.module.ts": {
-        "version": "3f1baf27fa18f21a75d00f1087e09299a8f6f6edcd636251c906074ebb81a1d7",
-        "signature": "1ba368845165f2342df237f9d80f114857d9c27dfedb161f52f1687e7cb05031"
-      },
-      "../src/config/configuration.ts": {
-        "version": "b65a07b5045cc0bb3f65ae0452801f1b41a3ba9d4656510d6276f9f28908fffe",
-        "signature": "5d0ab11fd9c825781336c555adf24b55315cd637a23056b7718416aa72e1169c"
       },
       "../node_modules/rxjs/internal/operators/audit.d.ts": {
         "version": "fe936a68d281ccc2060f8c3de69a0682a807c8fd1b8abccc0a91b83195ca0f94",
@@ -2014,28 +1982,16 @@
         "signature": "8548a1a83c1091e8c7a355b7edf031854b007d10a7fa24e180a95d608c87704e"
       },
       "../src/core/interceptors/logging.interceptor.ts": {
-        "version": "77e1019694599051e7def26186942bc4501bbb583d01fd44dd3e0d629e507c42",
+        "version": "720ab487dede66496fa3146a0f309a2a60ca463c667660a0ec851d65c0d34086",
         "signature": "65a1ddc2eb5c1ce43873c571f0a1fc6de9a7482820ef046e607e9cc11829cf69"
       },
       "../src/core/interceptors/transform.interceptor.ts": {
-        "version": "8521c071d9092f2c47ccf13edb94e7a88d5250044513bedca33fd635d3c2cd4c",
+        "version": "bfff62099951a50731ca442f2ef9fccb256d6e37dec2c21f81057d7cc679ef59",
         "signature": "8a6ac23341dc7e99a84260bde4fe17f4d57601127191a90e363660870940d578"
       },
       "../src/core/core.module.ts": {
-        "version": "eae2b7931b23669de29981e5e986bb725fdcf92d3878c2ab9f29dccd6250146c",
+        "version": "39a8eac22cc175a414543524e4630400807e6fd0e0e4341c76d6eb54c3158ba9",
         "signature": "994c9d7b726bd25178469ef71fa4cb0789a11c968d0398146d88fc92ec40f9b1"
-      },
-      "../src/telegrams/telegram.service.ts": {
-        "version": "ee6021e8bd6ef8878e8bd3ccf0cd03f83b078892b286ec9926bae907fe7a9b4e",
-        "signature": "9231979470872dadce318fd9ae4d17fa54e6be57fdac39558d489601a7dd7b59"
-      },
-      "../src/telegrams/telegram.controller.ts": {
-        "version": "ae9e94b3d9f32065db32abe0ecbc4765f73edb2dff450569bc90e80acf7836c1",
-        "signature": "9f909b47a10e9017c43b517c7b8a52d8b1e11d9f9295d22cb381c8b8aa5845e9"
-      },
-      "../src/telegrams/telegram.module.ts": {
-        "version": "187feceaa018b726dbf94be880e2937827603926527b91f299a9089ef48aa4fc",
-        "signature": "2b53cdcbded24f927e539ebc935f53578826e26acbb2bf88c6ef7719082ac610"
       },
       "../src/torrents/schemas/torrent.schema.ts": {
         "version": "4bb73efbb8c5b218f9647f69ed2084043cbd896d77471134ec32685969074e4b",
@@ -2046,7 +2002,7 @@
         "signature": "9447d39d2c4394cf841df2aeeba544824b9c445e4ac6b21227c805d2abe277d1"
       },
       "../src/torrents/interfaces/torrent.interface.ts": {
-        "version": "7c7a4bd563166c27ef6bfe565c7ea2a8eae8ec7b84a94d3b2823b151f7d092d7",
+        "version": "97fddc85a56c832e8ba8328d73c7f2eeba9bbda090eed69e52ae9b49749e0a8d",
         "signature": "a0ad2949a05cd21f9a0a431ff30bdcfa2db0b7ca5cb7adb84d448b71ac3058ee"
       },
       "../node_modules/mqtt/types/lib/store-options.d.ts": {
@@ -2078,19 +2034,19 @@
         "signature": "f9db4270e624f75d61a7f85379a870b18205357c821fbae53b97a7ead70b07c5"
       },
       "../src/torrents/torrent.service.ts": {
-        "version": "4631cf588e95a21ada9e1df7496ec30857892a5abf10ebdd547a7043e797a66d",
-        "signature": "58cbe8b797904940fcdf85e887218aac572432b06de9698d9fa5bbd6312cd324"
+        "version": "0f2a6154ee4dac8349ae5dcf4600aacfa38f4b5cb804c5a72b40104236689e93",
+        "signature": "6a86ed1266240bfe9247742e65a376a1a1c9a04ea602f2807bd2ffd26086b225"
       },
       "../src/torrents/torrent.controller.ts": {
-        "version": "d7f36c4bfff1f556740f01ab8cb526235c681f5d5e70e47301218e3a3b6729a9",
-        "signature": "693e3761affccaef03d4ef86947f48cc8332f4e47355dfc3564f0cdc2832a74d"
+        "version": "b4030e287d87e1078e7518252f3167136e380895efdc954ed410b7a0cfbad083",
+        "signature": "ed71e8550b2b2ba32c72efebd22c4ce747ccc8eac2895e1932609f2628f03971"
       },
       "../src/torrents/torrent.module.ts": {
-        "version": "964d4a52c9cb8d67dd24d181d2787e4d1582bdba4307d8009f1a9dac0c338c40",
+        "version": "88d8f10d10fa6b3450055c76cbf7b8746d5c49fcaa87d06de5adc655bf811218",
         "signature": "8f505dadf7ec6a7605ea218a869aad104c26fff6465622c613e57a90e8a88a86"
       },
       "../src/app.module.ts": {
-        "version": "f33419e5610f9d001fc080fc88ddb44e90996c01f5cf2c7c2d3be7f325bbece4",
+        "version": "ccfba2b7ab088ccc5adcbe171c17af7f789623dedf0c97c9a06b562735cd422f",
         "signature": "8a9b0ef8c541a1b6d4ea81f9fceb535f485ad6d4815999a1ce1f887d9722b3b5"
       },
       "../src/main.ts": {
@@ -2102,24 +2058,32 @@
         "signature": "74dd91d4a9e89666f7e7dc4e475e09de1393abcb65e46a7a8886b2116c57c90f"
       },
       "../src/common/decorators/roles.decorator.ts": {
-        "version": "8c07daae55db0b73ef35d67d6d0c212897351d1c3126fd1214dc30689f9432ba",
+        "version": "f52598eedc8dd140e4d4c566a13c0ab24ae9a0a4f13f1a0ea553e839d538e9ce",
         "signature": "6254a33665d737200d7d984bf9572a8638f94d143f80a5a84b6250883e4b2022"
       },
       "../src/common/filters/http-exception.filter.ts": {
-        "version": "c98709f390d17600a3b2cbdced4c00b188250dcc3bef98c7b58d4c44ff208ad2",
+        "version": "6a4aebce6b3afcb27272ced4b77a97358025978e3bd1d65b3236bbf09db57c5f",
         "signature": "ace6b4dc0abfa9d021b555b1040066bcd2715c9700b6934a1101c2e6bcff148e"
       },
+      "../src/common/guards/roles.guard.ts": {
+        "version": "2481035fa950f18c47ff32dd2cc87d4be97db83410d5afbe26e854764c680188",
+        "signature": "2034addee7c54c9756a5bca03bf90600cec6aca19627c71b632cfaef2e62a954"
+      },
       "../src/common/interceptors/exception.interceptor.ts": {
-        "version": "bf119cedf7a3cf98c0278e9a191e3178bc8b671975f7151efb018ce6f0f9a2ec",
+        "version": "1091a32e894f4b4162e3e974125c8c52d6fd35ecfdb41460ff86575adc661a06",
         "signature": "b5d6550bb1c7c368c4e074d9dc81e21bb9facb5d46bbbd9fbeb3e19f1ca8e486"
       },
       "../src/common/interceptors/timeout.interceptor.ts": {
-        "version": "a01c51aef6018bed22fc3333afe1b0d988f036f8afac5fdc8762107179889243",
+        "version": "5ad7604fc83978d9dd8815b75acdb01be29a7588623d56c555dfef5cbd530714",
         "signature": "f2045e921240cc43648c11f6a25b3b6786aa25eda08e10fd4b6e61759aec407a"
       },
       "../src/common/middleware/logger.middleware.ts": {
-        "version": "7add10aff461a50c0c9f08dc3db5d353dce96aebacb7f0964263f016bc328afd",
+        "version": "2325a587f396775e46e31cc40c4a26e5300c1c7b905b32e88d1891a404c9b559",
         "signature": "63ef32b8e8e6add37c50242f1bd5618ac6a5f2ee47e4d7d3500daf0b73893a71"
+      },
+      "../src/common/pipes/parse-int.pipe.ts": {
+        "version": "ac27457c8a5bbf1da04adb983999eb0f1a3930c93a9007d95a8744a117325574",
+        "signature": "bd51a8bd8cab9b38ac28d0812f12e9f85c1733d2e945a893619de212b8e7b0b9"
       },
       "../node_modules/class-transformer/classtransformoptions.d.ts": {
         "version": "d89af0c250e1424959162beae79f2c2745c729d6ab8028503d322395d96d3a2b",
@@ -2150,7 +2114,7 @@
         "signature": "097d4bf3331df1e138ffdcf92e1117f6841bc8337170d927fd955d5ee8a1674b"
       },
       "../src/common/pipes/validation.pipe.ts": {
-        "version": "b25b4a4db6394f83bd0e47e9cf70f51ff538eba76476f703e964d24193cd6308",
+        "version": "0d5c90d310058d1405550459b5b5997712181a6fd5e2a0d0b3a078ad02423a2c",
         "signature": "41aa017560214926c14951cb753b091a68a5250114e583d1aeea3d1b951a25ac"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -4413,6 +4377,10 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/config/configuration.ts": [
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts",
@@ -4656,61 +4624,6 @@
         "../node_modules/@nestjs/core/nest-factory.d.ts",
         "../node_modules/@nestjs/core/router/index.d.ts",
         "../node_modules/@nestjs/core/services/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/common/guards/roles.guard.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/core/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/common/pipes/parse-int.pipe.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/cats/dto/create-cat.dto.ts": [
-        "../node_modules/class-validator/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/cats/interfaces/cat.interface.ts": [
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/cats/cats.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../src/cats/dto/create-cat.dto.ts",
-        "../src/cats/interfaces/cat.interface.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/cats/cats.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/common/guards/roles.guard.ts",
-        "../src/common/pipes/parse-int.pipe.ts",
-        "../src/cats/cats.service.ts",
-        "../src/cats/dto/create-cat.dto.ts",
-        "../src/cats/interfaces/cat.interface.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/cats/schemas/cat.schema.ts": [
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/cats/cats.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/cats/cats.controller.ts",
-        "../src/cats/cats.service.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../src/cats/schemas/cat.schema.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/config/configuration.ts": [
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5421,27 +5334,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/telegrams/telegram.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/config/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/telegrams/telegram.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/auth/jwt-auth.guard.ts",
-        "../src/telegrams/telegram.service.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/telegrams/telegram.module.ts": [
-        "../src/telegrams/telegram.service.ts",
-        "../src/telegrams/telegram.controller.ts",
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/config/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../src/torrents/schemas/torrent.schema.ts": [
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
@@ -5500,11 +5392,12 @@
       ],
       "../src/torrents/torrent.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/users/users.service.ts",
         "../src/torrents/dto/create-torrent.dto.ts",
         "../src/torrents/interfaces/torrent.interface.ts",
         "../node_modules/mqtt/types/index.d.ts",
-        "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5519,11 +5412,13 @@
       ],
       "../src/torrents/torrent.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/users/schemas/users.schema.ts",
+        "../src/users/users.service.ts",
         "../src/torrents/schemas/torrent.schema.ts",
         "../src/torrents/torrent.controller.ts",
         "../src/torrents/torrent.service.ts",
-        "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -5534,10 +5429,8 @@
         "../src/app.controller.ts",
         "../src/app.service.ts",
         "../src/auth/auth.module.ts",
-        "../src/cats/cats.module.ts",
         "../src/config/configuration.ts",
         "../src/core/core.module.ts",
-        "../src/telegrams/telegram.module.ts",
         "../src/torrents/torrent.module.ts",
         "../src/users/users.module.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -5567,6 +5460,12 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/common/guards/roles.guard.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/core/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/common/interceptors/exception.interceptor.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/rxjs/index.d.ts",
@@ -5582,6 +5481,11 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/common/middleware/logger.middleware.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/common/pipes/parse-int.pipe.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
@@ -8096,22 +8000,6 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/common/guards/roles.guard.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/core/index.d.ts"
-      ],
-      "../src/common/pipes/parse-int.pipe.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/cats/cats.service.ts": [
-        "../src/cats/interfaces/cat.interface.ts",
-        "../src/cats/dto/create-cat.dto.ts"
-      ],
-      "../src/cats/cats.controller.ts": [
-        "../src/cats/cats.service.ts",
-        "../src/cats/dto/create-cat.dto.ts",
-        "../src/cats/interfaces/cat.interface.ts"
-      ],
       "../node_modules/rxjs/internal/operators/audit.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8805,12 +8693,6 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/rxjs/index.d.ts"
       ],
-      "../src/telegrams/telegram.service.ts": [
-        "../node_modules/@nestjs/config/index.d.ts"
-      ],
-      "../src/telegrams/telegram.controller.ts": [
-        "../src/telegrams/telegram.service.ts"
-      ],
       "../node_modules/mqtt/types/lib/store-options.d.ts": [
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
@@ -8856,6 +8738,7 @@
       ],
       "../src/torrents/torrent.service.ts": [
         "../node_modules/@nestjs/config/index.d.ts",
+        "../src/users/users.service.ts",
         "../src/torrents/interfaces/torrent.interface.ts",
         "../src/torrents/dto/create-torrent.dto.ts"
       ],
@@ -8877,6 +8760,10 @@
       "../src/common/filters/http-exception.filter.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
+      "../src/common/guards/roles.guard.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/core/index.d.ts"
+      ],
       "../src/common/interceptors/exception.interceptor.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/rxjs/index.d.ts"
@@ -8886,6 +8773,9 @@
         "../node_modules/rxjs/index.d.ts"
       ],
       "../src/common/middleware/logger.middleware.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/common/pipes/parse-int.pipe.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../node_modules/class-transformer/classtransformoptions.d.ts": [
@@ -9465,6 +9355,7 @@
       "../node_modules/@types/passport-local/index.d.ts",
       "../src/auth/local.strategy.ts",
       "../src/auth/auth.module.ts",
+      "../src/config/configuration.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
       "../node_modules/@nestjs/core/adapters/index.d.ts",
       "../node_modules/@nestjs/core/injector/module-token-factory.d.ts",
@@ -9501,15 +9392,6 @@
       "../node_modules/@nestjs/core/services/reflector.service.d.ts",
       "../node_modules/@nestjs/core/services/index.d.ts",
       "../node_modules/@nestjs/core/index.d.ts",
-      "../src/common/guards/roles.guard.ts",
-      "../src/common/pipes/parse-int.pipe.ts",
-      "../src/cats/dto/create-cat.dto.ts",
-      "../src/cats/interfaces/cat.interface.ts",
-      "../src/cats/cats.service.ts",
-      "../src/cats/cats.controller.ts",
-      "../src/cats/schemas/cat.schema.ts",
-      "../src/cats/cats.module.ts",
-      "../src/config/configuration.ts",
       "../node_modules/rxjs/internal/operators/audit.d.ts",
       "../node_modules/rxjs/internal/operators/audittime.d.ts",
       "../node_modules/rxjs/internal/operators/buffer.d.ts",
@@ -9616,7 +9498,6 @@
       "../src/core/interceptors/logging.interceptor.ts",
       "../src/core/interceptors/transform.interceptor.ts",
       "../src/core/core.module.ts",
-      "../src/telegrams/telegram.service.ts",
       "../src/torrents/schemas/torrent.schema.ts",
       "../src/torrents/dto/create-torrent.dto.ts",
       "../src/torrents/interfaces/torrent.interface.ts",
@@ -9627,7 +9508,6 @@
       "../node_modules/mqtt/types/lib/client.d.ts",
       "../node_modules/mqtt/types/lib/connect/index.d.ts",
       "../node_modules/mqtt/types/index.d.ts",
-      "../src/torrents/torrent.service.ts",
       "../src/torrents/torrent.controller.ts",
       "../src/torrents/torrent.module.ts",
       "../src/app.module.ts",
@@ -9635,9 +9515,11 @@
       "../src/auth/auth.guard.ts",
       "../src/common/decorators/roles.decorator.ts",
       "../src/common/filters/http-exception.filter.ts",
+      "../src/common/guards/roles.guard.ts",
       "../src/common/interceptors/exception.interceptor.ts",
       "../src/common/interceptors/timeout.interceptor.ts",
       "../src/common/middleware/logger.middleware.ts",
+      "../src/common/pipes/parse-int.pipe.ts",
       "../node_modules/class-transformer/classtransformoptions.d.ts",
       "../node_modules/class-transformer/classtransformer.d.ts",
       "../node_modules/class-transformer/metadata/exposeexcludeoptions.d.ts",
@@ -9680,8 +9562,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/telegrams/telegram.controller.ts",
-      "../src/telegrams/telegram.module.ts"
+      "../src/torrents/torrent.service.ts"
     ]
   },
   "version": "3.7.2"

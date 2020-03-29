@@ -21,7 +21,7 @@ let UsersController = class UsersController {
         this.usersService = usersService;
     }
     async create(createUserDto) {
-        this.usersService.create(createUserDto);
+        return this.usersService.create(createUserDto);
     }
     async findAll() {
         return this.usersService.findAll();
