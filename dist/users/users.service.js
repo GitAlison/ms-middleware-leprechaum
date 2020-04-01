@@ -22,6 +22,7 @@ let UsersService = class UsersService {
     }
     async create(createUserDto) {
         const created = new this.userModel(createUserDto);
+        console.log(created);
         return created.save();
     }
     async findAll() {

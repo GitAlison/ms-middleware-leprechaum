@@ -7,7 +7,7 @@ const config_1 = require("@nestjs/config");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const configService = app.get(config_1.ConfigService);
-    const port = configService.get('PORT');
+    const port = configService.get('PORT') | 5000;
     app.useGlobalPipes(new common_1.ValidationPipe());
     await app.listen(port);
 }

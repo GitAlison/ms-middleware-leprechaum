@@ -4,7 +4,6 @@ import { User } from './interfaces/users.interface';
 import { UsersService } from './users.service';
 import { JwtAuthGuard } from './../auth/jwt-auth.guard';
 
-@UseGuards(JwtAuthGuard)
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
@@ -13,17 +12,20 @@ export class UsersController {
   async create(@Body() createUserDto: CreateUserDto) {
     this.usersService.create(createUserDto);
   }
-
+  
+  @UseGuards(JwtAuthGuard)
   @Get()
   async findAll() {
     return this.usersService.findAll();
   }
 
+  @UseGuards(JwtAuthGuard)
   @Get(`:username`)
   async findOne(@Param() username: string){
     return this.usersService.findOne(username);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Put(`:username`)
   async update(
     @Param() username: string,
@@ -32,6 +34,8 @@ export class UsersController {
     return this.usersService.update(username, createUserDto);
   }
 
+
+  @UseGuards(JwtAuthGuard)
   @Delete(`:username`)
   async delete(@Param() username: string){
     return this.usersService.delete(username);
